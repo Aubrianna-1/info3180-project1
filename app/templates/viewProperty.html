@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="propertyInfo">
+    <img class="single_property" src="{{ url_for('get_img', filename=property.photo) }}"/>
+    <div class="info"><h4><b>{{property.title}}</b></h4>
+
+        <button class="pPrice" disabled>${{property.price}}</button> <!--disabled is an attribute to prevent the user from interacting with the button -->
+        <button class="pType" disabled>{{property.type}}</button> <!--disabled is an attribute to prevent the user from interacting with the button -->
+        <p>{{property.description}}</p>
+
+        <div class="specs">
+            <p> 🛏️ {{property.bedNum}} Bedrooms</p> 
+            <p> 🛁 {{property.bathNum}} Bathrooms</p>
+        </div>
+
+        <p>📍 {{property.location}}</p>
+        <button class="emailBtn" type="submit">Email Realtor</button>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+
+{% block main %}
+<h1><b>Add New Property</b></h1>
+<div class="addForm">
+<form  method="post"  enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    <div class="form-item">
+      <b>{{form.title.label(class="form-label")}}</b>
+        {{form.title(class='form-control')}} <br>
+      </div>
+      <div class="form-item">
+        <b>{{form.description.label(class="form-label")}}</b>
+        {{form.description(class='form-control', rows="4")}} <br>
+        </div>
+    
+  <div class="form_lower">    
+      <div class="form-item">
+          <b>{{form.bedNum.label(class="form-label")}}</b>
+          {{form.bedNum(class='form-control')}}<br>
+    
+        </div>
+      <div class="form-item">
+        <b>  {{form.bathNum.label(class="form-label") }} </b>
+          {{form.bathNum(class='form-control')}}<br>
+        </div>   
+        <div class="form-item">
+          <b>{{form.price.label(class="form-label") }}</b>
+            {{form.price(class='form-control')}}<br>
+          </div>
+        <div class="form-item">
+           <b> {{form.type.label(class="form-label") }}</b>
+            {{form.type(class='form-control') }} <br>
+        </div>
+  </div> 
+      <div class="form-item" style="width:235px">
+       <b> {{form.location.label(class="form-label") }} </b>
+          {{form.location(class='form-control', placeholder="Street, City, State")}}<br>
+        </div>
+
+    <div class="form-item" style="width:215px">
+       <b> {{form.photo.label(class="form-label") }}</b>
+       {{form.photo(class="form-control", placeholder="Browse")}}
+    </div>
+    <button class="addBtn" type="submit">Add Property</button>
+  </form>
+</div> 
+{% endblock %}

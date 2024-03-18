@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% if properties%}
+    <h1><b>Properties</b></h1><br>
+    <ul class="houseCards">  <!--similar to nav-bar so everything can fall side by side-->
+    {% for property in properties %}
+       <li>
+            <div class="cards">
+                <img src="{{ url_for('get_img', filename=property.photo) }}"/> <!--the variable properrty is storing the query from the /properties route -->
+                <div class="card_details">
+                    <h5><b>{{property.title}}</b></h5>
+                    <p style="color:lightgray;">📍{{property.location}}</p>
+                    <button class="pPrice" disabled>${{property.price}}</button> <!--disabled is an attribute to prevent the user from interacting with the button -->
+            </div>
+            <form action="{{url_for('viewProperty', propertyid=property.id)}}">
+                <button class="viewBtn" type="submit">View Property</button> 
+            </form>
+            </div>
+        </li> 
+    {% endfor %}
+</ul>
+</div>
+{% endif%}
+{% endblock %}

@@ -1,0 +1,142 @@
+body {
+    padding-top: 5rem;
+    background-color:#ececec;
+}
+
+.houseCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /*items will move to the next line if neccessary*/
+    justify-content: space-between;
+    gap: 30px;
+    list-style: none; /*to avoid bullet points*/
+}
+
+.cards{
+    width: 320px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cards > img{
+    height: 200px;
+    width: 100%;
+
+}
+
+.card_details{
+    background-color: #ffffff;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.pPrice{
+    background-color: #60a4f9;
+    color: #ffffff;
+    width: 85px;
+    height:20px; 
+    text-align: center;
+    font-size: 13px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #60a4f9;
+    margin-bottom: 18px;
+    padding-bottom: 20px;
+    
+}
+
+.pType{
+    background-color: #fabf23;
+    color: #ffffff;
+    width: 60px;
+    height: 20px; 
+    text-align: center;
+    font-size: 13px;
+    border-radius: 20px;
+    border-color:#fabf23;
+    border-style: solid;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.viewBtn{
+    background-color: #15b8a7;
+    color: #ffffff;
+    width:100%;
+    height: auto;
+    border-color: #15b8a7;
+    border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.emailBtn{
+    background-color: #15b8a7;
+    color: #ffffff;
+    border-radius: 5px;
+    border-color: #15b8a7;  
+    border-style: solid;
+    margin-bottom: 12px;
+    padding: 6px 11px;
+    
+}
+
+.addForm{
+    width:790px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 48px;
+    padding-right: 100px;  
+}
+
+.form_lower{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    column-gap: 45px;
+    width: 100%;
+    
+}
+
+.propertyInfo{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row; 
+    width:740px;
+    border-radius: 11px;
+    margin-top: 48px;
+
+}
+
+.info{
+    padding-left: 25px;
+    padding-top: 15px;
+
+}
+
+.single_property{
+    height: 350px;
+    width:350px;
+}
+
+.addBtn{
+    background-color: #0d6efd;
+    color: #ffffff;
+    border-radius: 5px;
+    border-color: #0d6efd;
+    border-style: solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 6px 11px;
+}
+
+.specs{
+    display: flex;
+    column-gap: 20px;
+}
+
+
+
+
